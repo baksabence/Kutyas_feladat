@@ -17,17 +17,18 @@ export default class Kartya{
     }
 
     kutyaKiir(){
-        
-        this.#szuloELEM.append(`
-        <div class="card col-lg-4 col-md-6">
-        <div class="card-body">
-          <h4 class="card-title">${this.#kutyaAdat.nev}</h4>
-          <p class="card-text">${this.#kutyaAdat.kor}</p>
-          <p class="card-text">${this.#kutyaAdat.nem}</p>
-        </div>
+        let tartalom = ` <div class="card col-lg-4 col-md-6"> <div class="card-body">`
+
+        for(let kulcs in this.#kutyaAdat){
+            tartalom += `<h4 class="card-title">${this.#kutyaAdat}</h4>
+            <p class="card-text">${this.#kutyaAdat}</p>
+            <p class="card-text">${this.#kutyaAdat}</p>`
+        }
+
+        tartalom += `</div>
         <button class="kiv btn btn-success">Kiválaszt</button>
-      </div>
-        `)
+      </div>`
+
         
     }
 
